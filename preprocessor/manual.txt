@@ -1,0 +1,19 @@
+Welcome to the user Manual for the Preprocessor created by Jordi Justicia, Telmo Linacisoro, Paula Ceprián, Roger Sola, Maheen Assad and Gonzalo Fuentes.
+To call the preprocessor first call the ppmakefile using the command "./ppmakefile" twice in the directory with the files from the preprocessor. Then you can call the preprocessor using "./preprocessor" and adding later the different arguments to perform certain actions.
+An example would be "./preprocessor -c -d yourcode.c". 
+If no c file is provided to the preprocessor, all flags except -help will be ignored, and an error message will show in the console.
+The arguments are:
+ -c     , to delete all comments
+ -d     , to process all directives
+ -all   , to delete all comments and process all directives
+ -help  , to show the user manual 
+Any number of arguments can be added to the command and all of them will do their associated function except if the argument -help was added, which will cancel all other commands and display the user manual, the current .txt that you are reading.s.
+For more information about the flags read next:
+-c will search for any comments after two slashes “//” or between slash asterisks “/* */” and deletes it from the main code.
+-d will search for the different directives after the #: constants, includes, macros, defines and ifdefs. For each case the code will to the following:
+Constants defined present in the code will be substituted by their respective values. 
+Macros will be changed by their equivalent functions in c language. 
+Includes will be changed by all the code from the file they reference.
+IfDefs will remain or be eliminated depending on if the statement after them is defined on the code.
+-all will call all functions before specified on -c and -d flags simultaneously.
+-help will ignore all other flags and print this manual as stated earlier in the console.
