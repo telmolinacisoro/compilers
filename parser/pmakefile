@@ -1,0 +1,9 @@
+parser: parser.o  functions.o
+	gcc -o parser parser.o functions.o
+
+functions.o: functions.c functions.h
+	gcc -c functions.c
+
+parser.o: parser.c parser.h 
+	gcc -c parser.c
+
