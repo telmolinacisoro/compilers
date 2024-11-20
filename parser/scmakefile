@@ -1,9 +1,0 @@
-scanner: scanner.o  functions.o
-	gcc -o scanner scanner.o functions.o
-
-functions.o: functions.c functions.h
-	gcc -c functions.c
-
-scanner.o: scanner.c scanner.h 
-	gcc -c scanner.c
-
